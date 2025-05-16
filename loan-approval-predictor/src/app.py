@@ -22,10 +22,7 @@ action_taken_labels = [
     "Preapproval request approved but not accepted"
 ]
 
-@app.route('/data-description')
-def data_description():
-    return render_template('data_description.html')
-    
+
 # Define the prediction route
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -109,6 +106,7 @@ def predict():
 
     # Render the result back to the UI
     return render_template('index.html', prediction=predicted_category)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
