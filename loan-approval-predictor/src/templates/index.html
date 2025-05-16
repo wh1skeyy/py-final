@@ -7,10 +7,9 @@
         html {
             font-size: 120%;
             font-family: 'Maison Neue', Arial, Helvetica, sans-serif;
-            background-image: url('/static/bg.png');
+            background: url('/static/bg.png') no-repeat center center;
+            background-size: 80vw 80vh;
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
         }
         .form-container {
             width: 1400px;  /* Increased width to fit the static text column */
@@ -62,6 +61,9 @@
 <body>
     <div class="form-container">
         <h1 style="text-align: center;">Input Data for Prediction</h1>
+        <p style="text-align: center; color: #333; font-size: 1.1em; margin-top: 20px;">
+            <a href="dd.html" target="_blank">Data Description</a>
+        </p>
         <form action="/predict" method="post">
             <div class="form-group">
                 <label for="purchaser_type">Purchaser Type:</label>
